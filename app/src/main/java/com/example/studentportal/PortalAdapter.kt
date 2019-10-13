@@ -1,6 +1,5 @@
 package com.example.studentportal
 
-import android.R
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,10 +10,10 @@ import kotlinx.android.synthetic.main.portal.view.*
 class PortalAdapter(private val portals: List<Portal>) : RecyclerView.Adapter<PortalAdapter.ViewHolder>() {
 
     /**
-     * Creates and returns a ViewHolder object, inflating a standard layout called simple_list_item_1.
+     * Creates and returns a ViewHolder object, inflating a standard layout
      */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(parent.context).inflate(com.example.studentportal.R.layout.portal, parent, false)
+        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.portal, parent, false)
         )
     }
 

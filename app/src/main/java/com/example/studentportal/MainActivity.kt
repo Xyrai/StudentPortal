@@ -1,5 +1,6 @@
 package com.example.studentportal
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
@@ -44,6 +45,7 @@ class MainActivity : AppCompatActivity() {
         startActivityForResult(intent, ADD_PORTAL_REQUEST_CODE)
     }
 
+    @SuppressLint("MissingSuperCall")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (resultCode == Activity.RESULT_OK) {
             when (requestCode) {

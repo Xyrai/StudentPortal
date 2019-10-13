@@ -22,11 +22,8 @@ class AddPortal : AppCompatActivity() {
     }
 
     private fun onSaveClick() {
-        if (txtTitle.text.isNullOrBlank() || txtUrl.text.isNullOrBlank()) {
-            Toast.makeText(
-                this,
-                "The title or url cannot be empty!", Toast.LENGTH_SHORT
-            ).show()
+        if (txtTitle.text.isNullOrBlank() || txtUrl.text.isNullOrBlank() || txtUrl.text.toString() == "http://") {
+            Toast.makeText(this,"The title or url cannot be empty!", Toast.LENGTH_SHORT).show()
         } else {
             var portal = Portal(txtTitle.text.toString(), txtUrl.text.toString())
             var resultIntent = Intent()
